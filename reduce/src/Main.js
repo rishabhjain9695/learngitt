@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { setData } from './action/UserAction';
-import { SETDATAS } from './constants';
-import user from './Reducers/UserReducer'
+// import { SETDATAS } from './constants';
+// import user from './Reducers/UserReducer';
 // import userss from './Reducers/UserSaga';
 function Main() {
   // const dispatch = useDispatch();
@@ -14,9 +14,6 @@ function Main() {
   // }, [dispatch]);
   return (
     <div>
-      {/* {s.data.map((e)=>{
-        return <div>e.title</div>
-      })} */}
       {data.map((e) => {
         return <div>{e.title}</div>;
       })}
