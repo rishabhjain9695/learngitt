@@ -8,7 +8,7 @@ switch (action.type) {
 
     }  
     case SETDATAS:{
-      return data;
+      return [action.data];
     }
     default:
         return data;

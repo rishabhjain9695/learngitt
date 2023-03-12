@@ -7,6 +7,7 @@ import { setData } from './action/UserAction';
 function Main() {
   // const dispatch = useDispatch();
   const data = useSelector((state) => state.user);
+  console.log(data,"parshant");
   //  const s=userss;
   //  console.log(s,"f");
   // useEffect(() => {
@@ -15,7 +16,7 @@ function Main() {
   return (
     <div>
       {data.map((e) => {
-        return <div>{e.title}</div>;
+        return <div>{e.id}</div>;
       })}
     </div>
   )
