@@ -1,15 +1,22 @@
 import axios from 'axios'
-import {takeEvery,put} from 'redux-saga/effects'
-import { SETDATA } from '../constants';
+import { takeLatest,put} from 'redux-saga/effects'
+import { SETDATA,SETDATAS } from '../constants';
 const baseurl='https://jsonplaceholder.typicode.com/todos';
 function* users(){
     console.log("saga called");
-    let data=yield axios.get(baseurl);
-    console.log(data,"s");
-    yield put({type:SETDATA,data});
+    try{
+    let data1=yield axios.get(baseurl);
+    let data=data1.data;
+    console.log(data,"as");
+    yield put({type:SETDATAS,data});
+} 
+catch(error){
+
 }
+  }
 function* Sagaa(){
     console.log("ayush");
-yield takeEvery(SETDATA,users);
+yield takeLatest(SETDATA,users);
 }
 export default Sagaa;
+// export default userss;

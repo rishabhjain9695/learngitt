@@ -1,12 +1,15 @@
 
 
-import { SETDATA } from "../constants";
+import { SETDATA,SETDATAS } from "../constants";
 const user=(data=[],action)=>{
 switch (action.type) {
     case SETDATA:{
-      return [action.data];
+      return data;
 
     }  
+    case SETDATAS:{
+      return data;
+    }
     default:
         return data;
 }
