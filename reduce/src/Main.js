@@ -16,7 +16,7 @@ function Main() {
   return (
     <div>
       {data.map((e) => {
-        return <div>{e.id}</div>;
+        return <li key={data.id}>{e.title}</li>;
       })}
     </div>
   )

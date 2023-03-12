@@ -11,8 +11,9 @@ function App() {
   // let name="";
   return (
    <>
-    <Main/>
+    
     <button onClick={()=>{dispatch(getData())}}>Submit</button>
+    <Main/>
    </>
 
   );
