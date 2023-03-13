@@ -11,10 +11,11 @@ function* users(payload){
     let body=[];
     const response =  yield axios.get("https://customcricketmatch-default-rtdb.firebaseio.com/Playerrecord.json");
     yield put(setData(Object.values(response.data)));
-    console.log((response.data),"donnnnnn")
+    console.log(Object.values(response.data),"donnnnnn")
         // console.log(body,"response");
         // yield put(setData(body));
         // console.log(body,"rrrr");
+        //aaaa
 } 
 catch(error){
   if(payload && payload?.fail) {
