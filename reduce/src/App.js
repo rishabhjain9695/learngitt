@@ -4,7 +4,12 @@ import { useSelector,useDispatch } from 'react-redux';
 // import user from './Reducers/UserReducer';
 import {getData} from './action/UserAction'
 import Main from './Main';
+import { useEffect } from 'react';
 function App() {
+  useEffect(()=>{
+    dispatch(getData());
+  },[])
+  let a ="apple"
   // const s=useSelector((state)=>state.changeTheNo);
   // const s=useSelector((state)=>state.user);
   const dispatch=useDispatch();
@@ -12,7 +17,7 @@ function App() {
   return (
    <>
     <Main/>
-    <button onClick={()=>{dispatch(getData())}}>Submit</button>
+    {/* <button onClick={()=>{dispatch(getData())}}>Submit</button> */}
    </>
 
   );
